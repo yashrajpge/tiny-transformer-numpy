@@ -54,6 +54,15 @@ python tests/test_gradients.py
 
 All three pass.
 
+## Demo
+
+`demo/` contains a reproducible staged-training demo:
+
+- `demo/run_demo.py` — one CPU run that records the loss trajectory and 220-character
+  generated samples at steps 0 / 250 / 500 / 1000 / 1500 (fixed generator seed, verbatim output).
+- `demo/samples.md` — the measured results from such a run: loss curve table, the
+  gibberish-to-structure sample progression, and the three test outputs.
+
 ## Honest limitations
 
 - Pure NumPy means no GPU: training is CPU-bound and the default config is deliberately small (~49 s) so anyone can reproduce it on a laptop.
